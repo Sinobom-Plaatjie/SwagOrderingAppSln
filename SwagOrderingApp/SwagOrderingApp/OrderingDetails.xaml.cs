@@ -12,29 +12,29 @@ namespace SwagOrderingApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OrderingDetails : ContentPage
     {
-        public SwagItem Item { get; set; }
-
         public OrderingDetails()
         {
             InitializeComponent();
 
-            this.Item = new SwagItem();
-            BindingContext = this;
+            var swagItem = new SwagItem();
+            BindingContext = swagItem;
+
         }
 
         async void OnSaveClicked(object sender, EventArgs e)
         {
+            var swagItem = (SwagItem)BindingContext;
             SwagItemDatabase database = await SwagItemDatabase.Instance;
-            await database.SaveItemAsync(Item);
+            await database.SaveItemAsync(swagItem);
             await Navigation.PopAsync();
 
         }
 
         async void OnDeleteClicked(object sender, EventArgs e)
         {
-            //var swagItem = (SwagItem)BindingContext;
+            var swagItem = (SwagItem)BindingContext;
             SwagItemDatabase database = await SwagItemDatabase.Instance;
-            await database.DeleteItemAsync(Item);
+            await database.DeleteItemAsync(swagItem);
             await Navigation.PopAsync();
 
         }

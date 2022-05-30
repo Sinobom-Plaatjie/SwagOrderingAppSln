@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace SwagOrderingApp
 {
-    //[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SwagListPage : ContentPage
     {
         public SwagListPage()
@@ -41,6 +41,11 @@ namespace SwagOrderingApp
                     BindingContext = e.SelectedItem as SwagItem
                 });
             }
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new OrderingDetails());
         }
     }
 }

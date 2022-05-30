@@ -1,9 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SwagOrderingApp.SwagListPage">
+             x:Class="SwagOrderingApp.SwagListPage" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
+            <Frame BackgroundColor="Gray" Margin="0" CornerRadius="0" BorderColor="Black" HeightRequest="80">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Swag Ordering!" TextColor="White" FontSize="Large" FontAttributes="Bold" Grid.Row="0" Grid.Column ="0"/>
+                    <ImageButton Source ="orderLogo.png" Clicked="ImageButton_Clicked" Grid.Row="0" Grid.Column ="1" HorizontalOptions="EndAndExpand" WidthRequest="45" VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </Frame>
+
+
             <ListView x:Name="listView"
               Margin="20"
               ItemSelected="OnListItemSelected">

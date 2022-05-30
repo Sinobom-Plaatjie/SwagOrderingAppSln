@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SwagOrderingApp.OrderingDetails" Title="Ordering Details">
-    <ContentPage.Content >
+             x:Class="SwagOrderingApp.OrderingDetails" Title="{Binding Name}">
+    
         <StackLayout Margin="25"
             VerticalOptions="StartAndExpand"  >
             <Label Text="Name" />
-            <Entry Text="{Binding Item.Name}" />
+            <Entry Text="{Binding Name}" />
             <Label Text="Gender" />
-            <Entry Text="{Binding Item.Gender}" />
+            <Entry Text="{Binding Gender}" />
             <Label Text="T-Shirt Size (S,M,L,XL)" />
-            <Entry Text="{Binding Item.Size}" />
+            <Entry Text="{Binding Size}" />
             <Label Text="Date of Order" />
             <DatePicker MinimumDate="01/11/2012"
             MaximumDate="01/11/2023"
             Date="{Binding Date}" />
             <Label Text="T-Shirt Color" />
-            <Entry Text="{Binding Item.Color}" />
+            <Entry Text="{Binding Color}" />
             <Label Text="Shipping Address" />
-            <Entry Text="{Binding Item.Address}" />
-            <Switch IsToggled="{Binding Item.Done}" />
+            <Entry Text="{Binding Address}" />
+            <Switch IsToggled="{Binding Done}" />
             
             <Button Margin="5"  Text="Save"
                 Clicked="OnSaveClicked" CornerRadius="20" BackgroundColor="DimGray" />
@@ -31,5 +31,5 @@
                 Clicked="OnCancelClicked" CornerRadius="20" BackgroundColor="DimGray" />
 
         </StackLayout>
-    </ContentPage.Content>
+    
 </ContentPage>
