@@ -17,6 +17,13 @@ namespace SwagOrderingApp
             InitializeComponent();
         }
 
-        
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await Task.Delay(2000);
+            await Navigation.PushAsync(new SwagListPage());
+        }
+
     }
 }

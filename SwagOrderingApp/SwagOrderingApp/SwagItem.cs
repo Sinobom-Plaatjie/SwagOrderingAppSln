@@ -20,6 +20,8 @@ namespace SwagOrderingApp
 
         public string Color { get; set; }
 
+        public string Address { get; set; }
+
         public bool Done { get; set; }
     }
 }

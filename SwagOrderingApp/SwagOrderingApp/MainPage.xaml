@@ -5,24 +5,11 @@
     
 
     <StackLayout>
-        <Frame BackgroundColor="Black" HeightRequest="800">
-            
+        <Frame BackgroundColor="Black" HeightRequest="900">
+            <Image Source ="dotnet.png" HeightRequest="800"/>
         </Frame>
-        <Image Source ="netLogo.png" HeightRequest="800"/>
-        <!--<Frame BackgroundColor="Gray" Margin="0" CornerRadius="0" BorderColor="Black">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Label Text="Swag Ordering!" TextColor="White" FontSize="Large" FontAttributes="Bold" Grid.Row="0" Grid.Column ="0"/>
-                <ImageButton Source ="orderLogo.png" Clicked="ImageButton_Clicked" Grid.Row="0" Grid.Column ="1" HorizontalOptions="EndAndExpand" WidthRequest="45" VerticalOptions="CenterAndExpand"/>
-            </Grid>
-        </Frame>-->
+        <Image Source ="dotnet.png" HeightRequest="800"/>
+      
     </StackLayout>
 
 </ContentPage>
